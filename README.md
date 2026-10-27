@@ -67,7 +67,7 @@ It can be used for activities such as:
 
 ---
 
-## 🏗️ Lab Architecture
+##  Lab Architecture
 
 ![](1-screenshot-title-image.png)
 
@@ -78,24 +78,24 @@ Additional target machines can be added to the same virtual network in future pr
 
 ## ⚙️ Lab Configuration
 
-| 🧩 Component       | ⚙️ Configuration   |
+|  Component       |  Configuration   |
 | ------------------ | ------------------  |
-| 🖥️ Host OS         | Windows 11         |
-| 🧠 Host RAM        | 16 GB              |
-| ⚡ Processor       | AMD Ryzen AI 5 340 w/ Radeon 840M |
-| 🧰 Hypervisor      | VirtualBox 7.2     |
-| 🐉 Security OS     | Kali Linux 2026.2  |
-| 🧠 Kali RAM        | 4096 MB            |
-| 🌐 Virtual Network | NAT Network        |
-| 📡 Network Address | 10.0.0.0/24        |
-| 🐧 Kali IP Address | 10.0.0.2/24       |
-| 🚪 Default Gateway | 10.0.0.1           |
-| 🌍 DNS Server      | 10.0.0.1           |
-| 🔮 Future VM Range | 10.0.0.3–10.0.0.99 |
+|  Host OS         | Windows 11         |
+|  Host RAM        | 16 GB              |
+|  Processor       | AMD Ryzen AI 5 340 w/ Radeon 840M |
+|  Hypervisor      | VirtualBox 7.2     |
+|  Security OS     | Kali Linux 2026.2  |
+|  Kali RAM        | 4096 MB            |
+|  Virtual Network | NAT Network        |
+|  Network Address | 10.0.0.0/24        |
+|  Kali IP Address | 10.0.0.2/24       |
+|  Default Gateway | 10.0.0.1           |
+|  DNS Server      | 10.0.0.1           |
+|  Future VM Range | 10.0.0.3–10.0.0.99 |
 
 ---
 
-# 🪜 Lab Setup Procedure
+#  Lab Setup Procedure
 
 ## Step 1. Install 7-Zip
 
@@ -168,7 +168,7 @@ Gateway: 10.0.0.1
 DNS: 10.0.0.1
 ```
 
-A consistent IP address makes it easier to document the lab and reference the Kali machine in future exercises.
+
 
 ![](4-screenshot-kali-network-settings.png)
 
@@ -186,7 +186,7 @@ Clean Kali - Network Setup
 
 The snapshot represents the clean baseline of the laboratory.
 
-If a future exercise changes or damages the VM configuration, the machine can be restored to this baseline.
+
 
 
 ---
@@ -195,12 +195,12 @@ If a future exercise changes or damages the VM configuration, the machine can be
 
 | ✅ Test                        | 🧾 Command                      | 🎯 Expected Result              |
 | ----------------------------- | ------------------------------- | ------------------------------- |
-| 🌐 Check IP address           | `ip a`                          | Correct Kali IP displayed       |
-| 📡 Test gateway               | `ping 10.0.0.1`                 | Successful replies              |
-| 🌍 Test Internet connectivity | `ping 10.0.0.1`                 | Successful replies              |
-| 🔎 Test DNS resolution        | `nslookup networkwalks.com`     | Domain resolves                 |
-| 🧰 Verify Nmap                | `nmap --version`                | Nmap version displayed          |
-| 🔄 Verify snapshot            | Restore snapshot and run `ip a` | Baseline configuration restored |
+|  Check IP address           | `ip a`                          | Correct Kali IP displayed       |
+|  Test gateway               | `ping 10.0.0.1`                 | Successful replies              |
+|  Test Internet connectivity | `ping 10.0.0.1`                 | Successful replies              |
+|  Test DNS resolution        | `nslookup networkwalks.com`     | Domain resolves                 |
+|  Verify Nmap                | `nmap --version`                | Nmap version displayed          |
+|  Verify snapshot            | Restore snapshot and run `ip a` | Baseline configuration restored |
 
 ### Example Results
 
@@ -219,11 +219,10 @@ DNS:
 
 # 🐞 Problems Encountered & Solutions
 
-Documenting problems is an important part of the project.
+
 
 ## Problem 1. Internet Connectivity After Static IP Configuration
 
-After manually configuring the IPv4 settings, Internet connectivity may fail depending on the Kali/NetworkManager configuration.
 
 One workaround used during this lab was:
 
